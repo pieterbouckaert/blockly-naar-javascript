@@ -21,6 +21,7 @@ if(minprijs<maxprijs){
  })
 
 
+
 console.log(verkoop);
 console.log(gemiddelde);
 }else{
