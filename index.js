@@ -1,9 +1,5 @@
 "use strict";
 
-console.log([2, 5, 8, 11].reduce((som, getal) => som + getal));
-console.log([5, 8, 2, 11].reduce(
-    (kleinste, getal)=> {if (kleinste < getal) return kleinste; return getal;}));
-
 const artikels = tikartikels();
 
 let filterwoord = prompt("woord");
@@ -21,6 +17,10 @@ if(minprijs<maxprijs){
  verkoop.forEach(artikel=>{
     gemiddelde += artikel.verkoopprijs / verkoop.length
  })
+
+ const som = verkoop.reduce((totaal, prijs)=>{
+    return totaal + prijs
+ }, 0)
 console.log(verkoop);
 console.log(gemiddelde);
 
