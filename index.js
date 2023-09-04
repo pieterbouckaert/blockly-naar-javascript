@@ -6,6 +6,8 @@ let filterwoord = prompt("woord");
 let result = []
 result = artikels.filter( artikel => artikel.artikelnaam.includes(filterwoord) );
 
+ result.forEach(artikel=> {console.log(artikel.artikelnaam)});
+
 let minprijs = prompt("min prijs");
 let maxprijs = prompt("max prijs");
 let verkoop = [];
@@ -18,12 +20,9 @@ if(minprijs<maxprijs){
     gemiddelde += artikel.verkoopprijs / verkoop.length
  })
 
- const som = verkoop.reduce((totaal, prijs)=>{
-    return totaal + prijs
- }, 0)
+
 console.log(verkoop);
 console.log(gemiddelde);
-
 }else{
     console.log("foute ingave min prijs is hoger dan max prijs");
 };
