@@ -24,12 +24,6 @@ if(minprijs<maxprijs){
 console.log(verkoop);
 console.log(gemiddelde);
 
-function berekenGemiddelde(landen) {
-    return landen.map(land => land.oppervlakte)
-    .reduce((totaal, oppervlakte) => totaal + oppervlakte) / landen.length;
-    }
-
-
 }else{
     console.log("foute ingave min prijs is hoger dan max prijs");
 };
